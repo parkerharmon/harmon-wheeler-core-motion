@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		69513E5F2D098405009866D5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 69513E5E2D098405009866D5 /* FirebaseAuth */; };
+		69513E612D098405009866D5 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 69513E602D098405009866D5 /* FirebaseCore */; };
+		69513E632D098405009866D5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 69513E622D098405009866D5 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		69513E412D09834F009866D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69513E612D098405009866D5 /* FirebaseCore in Frameworks */,
+				69513E5F2D098405009866D5 /* FirebaseAuth in Frameworks */,
+				69513E632D098405009866D5 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = "harmon-wheeler-core-motion";
 			packageProductDependencies = (
+				69513E5E2D098405009866D5 /* FirebaseAuth */,
+				69513E602D098405009866D5 /* FirebaseCore */,
+				69513E622D098405009866D5 /* FirebaseFirestore */,
 			);
 			productName = "harmon-wheeler-core-motion";
 			productReference = 69513E302D09834D009866D5 /* harmon-wheeler-core-motion.app */;
@@ -195,6 +207,9 @@
 			);
 			mainGroup = 69513E272D09834D009866D5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				69513E5D2D098405009866D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 69513E312D09834D009866D5 /* Products */;
 			projectDirPath = "";
@@ -398,6 +413,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"harmon-wheeler-core-motion/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "We use location data for a better user experience.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data for a better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +443,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"harmon-wheeler-core-motion/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "We use location data for a better user experience.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data for a better user experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +571,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		69513E5D2D098405009866D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		69513E5E2D098405009866D5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69513E5D2D098405009866D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		69513E602D098405009866D5 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69513E5D2D098405009866D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		69513E622D098405009866D5 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69513E5D2D098405009866D5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 69513E282D09834D009866D5 /* Project object */;
 }
