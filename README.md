@@ -193,10 +193,10 @@ As a coder you will have to edit your app's `info.plist` file and set a message 
 
     import CoreLocation
 
-class LocationManager: NSObject, CLLocationManagerDelegate {
-    private let locationManager = CLLocationManager()
-    private var previousAltitude: CLLocationDistance?
-    private var initialAltitude: CLLocationDistance?
+    class LocationManager: NSObject, CLLocationManagerDelegate {
+        private let locationManager = CLLocationManager()
+        private var previousAltitude: CLLocationDistance?
+        private var initialAltitude: CLLocationDistance?
     
     @Published var positiveAltitudeChange: CLLocationDistance = 0.0
     @Published var negativeAltitudeChange: CLLocationDistance = 0.0
@@ -245,8 +245,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         // Update previous altitude for the next location update
         previousAltitude = newLocation.altitude
-    }
-}
+	    }
+       }
+
 
 This manager tracks the users altitude changes within the hike. 
 
